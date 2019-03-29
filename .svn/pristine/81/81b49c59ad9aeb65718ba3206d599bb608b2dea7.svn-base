@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="272px" height="272px" viewBox="0 0 272 272" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Widget/bg-green</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="3.54508197%" cy="2.0476083%" fx="3.54508197%" fy="2.0476083%" r="137.470805%" id="radialGradient-1">
+            <stop stop-color="#29F262" offset="0%"></stop>
+            <stop stop-color="#0DED4B" offset="49.6996929%"></stop>
+            <stop stop-color="#08C83D" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-2" x="0" y="0" width="260" height="260" rx="8"></rect>
+        <filter x="-3.5%" y="-3.5%" width="106.9%" height="106.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.182829484 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="App" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Widget" transform="translate(-1030.000000, -436.000000)">
+            <g id="Widget/bg-green" transform="translate(1036.000000, 442.000000)">
+                <g id="bg-copy-5">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="url(#radialGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

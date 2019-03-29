@@ -1,0 +1,43 @@
+ .product {
+      height: 425px;
+      padding: 30px;
+      background: white;
+      box-shadow: 0 4px 10px 0 rgba(0,0,0,0.21);
+      border-radius: 5px;
+      z-index: 2;
+      .img_wrap {
+        height: 360px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        max-width: 720px;
+        max-height: 360px;
+        background: #D7EFEE;
+        border-radius: 5px;
+      }
+      :global {
+        .slick-slide {
+          padding: 0 2px;
+        }
+        .slick-dots {
+          left: 0;
+          bottom: 18px;
+          li {
+            button {
+              width: 16px !important;
+              height: 16px !important;
+              margin: 0 6px;
+              opacity: 1;
+              border-radius: 50%;
+              background: #E8EDEE;
+            } 
+            &.slick-active button {
+              background: #FBDE40;
+            }
+          }
+        } 
+      }
+
+    }

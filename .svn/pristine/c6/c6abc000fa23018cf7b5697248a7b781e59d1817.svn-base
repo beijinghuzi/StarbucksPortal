@@ -1,0 +1,320 @@
+@import '~antd/lib/style/themes/default.less';
+@import '../../utils/utils.less';
+.container {
+  .main {
+    background: url(/src/assets/bg-item/vein.png) repeat;
+    padding-bottom: 62px;
+    .product {
+      height: 425px;
+      padding: 30px;
+      background: white;
+      box-shadow: 0 4px 10px 0 rgba(0,0,0,0.21);
+      border-radius: 5px;
+      z-index: 2;
+      .img_wrap {
+        height: 360px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        max-width: 720px;
+        max-height: 400px;
+        background: #D7EFEE;
+        border-radius: 5px;
+      }
+      :global {
+        .slick-slide {
+          padding: 0 2px;
+        }
+        .slick-dots {
+          left: 0;
+          bottom: 18px;
+          li {
+            button {
+              width: 16px !important;
+              height: 16px !important;
+              margin: 0 6px;
+              opacity: 1;
+              border-radius: 50%;
+              background: #E8EDEE;
+            } 
+            &.slick-active button {
+              background: #FBDE40;
+            }
+          }
+        } 
+      }
+
+    }
+    .right_panel {
+        z-index: 2;
+      .prd_title {
+        display: flex;
+        height: 75px;
+        margin-bottom: 14px;
+        color: #120e28;
+        font-size: 20px;
+        line-height: 25px;
+        overflow: hidden;
+      }
+      .news {
+        height: 36px;
+        margin-bottom: 14px;
+        color: #f7282e;
+        overflow: hidden;
+        line-height: 18px;
+      }
+      .info {
+        width: 95%;
+        padding: 10px;
+        border-radius: 10px 10px 0 0;
+        background: linear-gradient(white 62%, transparent);
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.14);
+        .item {
+          height: 32px;
+          overflow: hidden;
+          margin: 10px 0;
+          padding: 2px 10px;
+          line-height: 28px;
+          color: #999;
+          cursor: default;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.14) inset;
+          border-radius: 4px;
+          .values {
+            padding-left: 14px;
+            color: #333333;
+          }
+        }
+      }
+      .rate_num {
+        width: 88px;
+        height: 62px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 4px 46px;
+        background: #fbde4a;
+        color: white;
+        cursor: pointer;
+        transition: all .3s ease-in;
+        &:hover {
+          border-radius: 46px 4px;
+          transition: all .3s ease-in;
+          a {
+            padding-left: 140px;
+            font-weight: bold;
+            border: 1px dashed white;
+            transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
+          }
+        }
+      }
+      .price {
+        font-size: 22px;
+        letter-spacing: 4px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 21px;
+        color: #f7282e;
+      }
+      .rate {
+        position: absolute;
+        right: 14px;
+        margin-top: -40px;
+        width: 300px;
+        height: 108px;
+        line-height: 28px;
+        padding: 12px;
+        padding-left: 50px;
+        .rate_bg {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 0;
+          width: 300px;
+          height: 108px;
+          background: url(/src/assets/rate-bg.png) no-repeat;
+          background-size: contain;
+          border-radius: 8px;
+          z-index: 1;
+        }
+        .name {
+          position: absolute;
+          z-index: 2;
+        }
+        .stars {
+          position: absolute;
+          left: 150px;
+          width: 114px;
+          :global {
+            .ant-progress-line,
+            .ant-progress-inner {
+              height: 24px !important;
+              background: white;
+              .ant-progress-bg {
+                height: 24px !important;
+                border-radius: 0 !important;
+                background: #fbde4b;
+              }
+            }
+          }
+        }
+      }
+    }
+    .card_info {
+      height: 268px;
+      padding-top: 140px;
+      margin-top: -140px;
+      z-index: 1;
+      .comment,
+      .members {
+        margin-left: 50%;
+        padding-top: 28px;
+        width: 40%;
+        height: 70px;
+      }
+      .members {
+        padding-top: 6px;
+        .avatar {
+          display: inline-block;
+          border-radius: 2px;
+          margin: 0 1px;
+          overflow: hidden;
+          img {
+            width: 52px;
+            height: 52px;
+          }
+        }
+      }
+      .btn_shop_group {
+        margin-top: 36px;
+        text-align: center;
+        :global {
+          .ant-btn {
+            height: 50px;
+            width: 50px;
+            margin: 10px 18px;
+            padding: 0;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+            border-radius: 8px;
+            .iconfont {
+              line-height: 50px;
+              font-size: 36px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .details {
+    :global {
+      .ant-tabs {
+        margin-top: -36px;
+        background: #FFFFFF;
+      }
+      .ant-tabs-bar {
+        margin: 2px;
+        border-bottom: none;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.17);
+        border-radius: 2px;
+      }
+      .ant-tabs-content {
+        min-height: 400px;
+        margin: 10px 40px;
+      }
+      .ant-tabs-nav {
+        width: 100%;
+        height: 71px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .ant-tabs-tab {
+          margin: 0;
+          font-size: 18px;
+          color: #333333;
+          letter-spacing: 1px;
+          text-align: center;
+          line-height: 36px;
+          z-index: 2;
+          &.ant-tabs-tab-active {
+            color: white;
+          }
+        }
+        .ant-tabs-ink-bar {
+          height: 44px;
+          background: #FBDE40;
+          bottom: 17px;
+          &:before {
+            position: absolute;
+            content: '';
+            left: 50%;
+            bottom: -18px;
+            margin-left: -10px;
+            border: 10px solid;
+            border-left-color: transparent !important;
+            border-bottom-color: transparent !important;
+            border-right-color: transparent !important;
+            background: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  .btn_review {
+    text-align: right;
+    margin-right: 2%;
+    margin-top: 12px;
+    margin-bottom: 7px;
+  }
+
+  .app_guide {
+    padding: 10px 40px 40px;
+    text-align: left;
+    border: 1px solid #ddd;
+    .title {
+      margin-top: 28px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #eaecef;
+    }
+    .details {
+      line-height: 2;
+      padding-left: 14px;
+    }
+  }
+
+  .app_info {
+    .version {
+      padding: 40px;
+      border-right: 1px solid #eaecef;
+      .vername {
+        font-size: 18px;
+        color: #aaa;
+        border-bottom: 1px solid #eaecef;
+      }
+      .verdtl {
+        li {
+          margin-left: 18px;
+          list-style-type: circle;
+        }
+      }
+    }
+    .info {
+      margin-top: 20px;
+      padding: 40px;
+      border-bottom:1px dashed #ccc;
+      .item {
+        color: #aaa;
+        line-height: 30px;
+        .name {
+          cursor: default;
+        }
+        .values {
+          padding-left: 8px;
+          color: @primary-color;
+        }
+      }
+    }
+  }
+}
+

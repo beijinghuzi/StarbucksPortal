@@ -1,0 +1,91 @@
+@import '~antd/lib/style/themes/default.less';
+@import '../../utils/utils.less';
+
+.bg_layer {
+  width: 100%;
+  height: 560px;
+  left: 0px;
+  top: 64px;
+  position: absolute;
+  background: #191039 url(../../assets/bg-layer.svg);
+  background-size: cover;
+}
+.content {
+  margin-left: -24px !important;
+  margin-right: -24px !important;
+  margin-top: -10px;
+  background: white;
+  padding: 30px 0;
+}
+:global {
+  .wrapper {
+    position: relative;
+    height: 520px;
+    color: white;
+    text-align: center;
+    .logo {
+      width: 92px;
+      height: 130px;
+      margin: 30px auto 50px;
+      background: url(../../assets/logo.svg) center no-repeat;
+      background-size: contain;
+    }
+    .search-block {
+      width: 66%;
+      margin: 0 auto;
+      border-bottom: 2px solid #32275a;
+      box-shadow: 0 5px 8px #141027;
+      .icon-search {
+        position: absolute;
+        line-height: 42px;
+        font-size: 22px;
+        left: 38%;
+        opacity: .8;
+        transition: .2s all ease-out;
+        transition-delay: .3s;
+      }
+      input {
+        width: 100%;
+        background: transparent;
+        border-width: 0;
+        padding: 5px;
+        text-align: center;
+        line-height: 26x;
+        font-size: 20px;
+        letter-spacing: 2px;
+        transform: scale(.8);
+        transition: .2s all ease-out;
+        transition-delay: .3s;
+        &:focus,&:hover {
+          outline: none;
+          transform: scale(1);
+          transition: .2s all ease-in;
+        }
+        &:focus + .icon-search,
+        &:hover + .icon-search {
+          left: 20%;
+          opacity: 0;
+          transition: .2s all ease-in;
+        }
+      }
+    }
+    .ubi-des {
+      width: 460px;
+      height: 150px;
+      margin: 0 auto;
+      margin-top: 87px;
+    }
+  }
+  .bg-ellipse {
+    height: 30px;
+    border-radius: 40%;
+    background: white;
+    margin-top: -28px;
+    border-top: 1px dashed #240d4e;
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+
+}
+

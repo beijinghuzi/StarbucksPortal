@@ -1,0 +1,260 @@
+@import '~antd/lib/style/themes/default.less';
+@import '../../utils/utils.less';
+:global {
+    .container {
+        min-width: 800px;
+        background: #f6f7f8;
+        border-radius: 20px 20px 0 0;
+        padding-top: 16px;
+        padding-left: 20px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
+        .left-menu {
+            min-width: 108px;
+            margin-left: 14px;
+            padding: 0 !important;
+            background: #FFFFFF;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.21);
+            border-radius: 2px;
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    margin: 0;
+                    padding: 0;
+                    height: 58px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .icon {
+                        font-size: 18px;
+                        color: #122112;
+                        padding-right: 4px;
+                    }
+                    .name {
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                    &.current,
+                    &:hover {
+                        background: #120E28;
+                        border-radius: 2px;
+                        color: white;
+                        .icon {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        .content {
+            width: calc(~'100% - 170px');
+            .tags-collapse {
+                padding: 4px;
+                background: white;
+                border-radius: 2px;
+                border: 1px solid #eadfdf;
+                .ant-tag-checkable {
+                    margin-right: 8px;
+                    padding: 0 14px;
+                    border-radius: 10px;
+                }
+            }
+            .tags-row {
+                display: flex;
+                background: white;
+                padding: 4px 10px;
+                align-items: center;
+                border-bottom: 1px dashed #ddd;
+                .title {
+                    width: 80px;
+                    font-weight: bold;
+                    cursor: default;
+                }
+                .tags {
+                    width: calc(~'100% - 114px');
+                }
+            }
+        }
+    }
+    .btn-more {
+        overflow: hidden;
+        line-height: 32px;
+        h5 {
+            color: white;
+            font-size: 12px;
+            transition: .21s all ease-in;
+        }
+        &.active,
+        &:hover {
+            .icon,
+            h5 {
+                transform: translateY(-32px);
+                transition: .21s all ease-in;
+            }
+        }
+    }
+    .tags-collapse+.sort-row {
+        margin-top: -6px;
+    }
+    .sort-row {
+        display: flex;
+        background: white;
+        border: 1px solid #eadfdf;
+        .sort-item {
+            border-right: 1px solid #ddd;
+            padding: 4px 8px;
+            .sort-name {}
+            .icon {
+                font-size: 14px;
+                padding: 0 6px;
+                &:hover {
+                    color: #EF0909;
+                }
+            }
+        }
+    }
+    .app-page {
+        margin: 14px 0 !important;
+        min-height: 400px;
+    }
+    .app-card-wrap {
+        display: inline-block;
+        width: 360px;
+        .app-plus {
+            margin-left: 20px;
+            width: 50px;
+            height: 50px;
+            background: #ffffff;
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: 0 0 14px rgba(0, 0, 0, 0.14);
+            .icon-plus {
+                font-size: 28px;
+                line-height: 50px;
+            }
+        }
+    }
+    .app-card {
+        display: inline-flex;
+        position: relative;
+        margin: 14px;
+        width: 240px;
+        height: 300px;
+        flex-direction: column;
+        background: #FFFFFF;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.21);
+        border-radius: 6px;
+        font-size: 12px;
+        .add-shop {
+            position: absolute;
+            right: 28px;
+            bottom: 2px;
+            opacity: 0;
+            z-index: 2;
+            .icon {
+                font-size: 28px;
+                color: #f7282e;
+            }
+        }
+        .project-cover {
+            height: 158px;
+            cursor: pointer;
+            position: relative;
+            .card-pic img {
+                height: 158px;
+                border-radius: 3px 3px 0 0;
+                display: block;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+        }
+        .project-details {
+            color: #191919;
+            padding: 7px 10px 0 10px;
+            
+            div {
+                box-sizing: border-box;
+            }
+            .project-title {
+                font-family: inherit;
+                font-size: 13px;
+                display: block;
+                font-weight: bold;
+                height: 36px;
+                line-height: 1.35;
+                overflow: hidden;
+            }
+            .project-tags {
+                height: 23px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: inline-block;
+                margin-top: 2px;
+                font-family: inherit;
+                font-size: 11px;
+                font-weight: bold;
+                font-weight: normal;
+            }
+            .description {
+                height: 36px;
+                position: relative;
+                overflow: hidden;
+                display: block;
+                line-height: 17px;
+                &:after {
+                    background-color: #ccc;
+                    bottom: 5px;
+                    content: '';
+                    display: block;
+                    height: 1px;
+                    left: 0;
+                    position: absolute;
+                    width: 10px;
+                }
+            }
+        }
+        .project-stats {
+            font-size: 11px;
+            font-weight: bold;
+            -ms-flex-align: center;
+            align-items: center;
+            border-top: 1px #f2f2f2 solid;
+            box-sizing: border-box;
+            display: -ms-flexbox;
+            display: flex;
+            font-weight: normal;
+            padding: 7px 0;
+            >div {
+                align-items: center;
+                display: flex;
+                float: left;
+                font-size: 13px;
+                font-weight: bold;
+                margin-right: 18px;
+                position: relative;
+                vertical-align: middle;
+                cursor: default;
+            }
+            .name {
+                .icon {
+                    color: #a4a4a4;
+                    margin-right: 7px;
+                }
+            }
+            .number {
+                min-width: 30px;
+            }
+        }
+        &:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+            transition: .3s all ease-in;
+            .add-shop {
+                animation: shopcar .6s linear;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}

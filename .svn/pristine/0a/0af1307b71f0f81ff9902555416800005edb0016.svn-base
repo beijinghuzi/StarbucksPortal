@@ -1,0 +1,479 @@
+html,
+body,
+:global(#root) {
+    height: 100%;
+}
+
+:global(.ant-layout) {
+    min-height: 100%;
+}
+
+canvas {
+    display: block;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input {
+    outline: none !important;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.globalSpin {
+    width: 100%;
+    margin: 40px 0 !important;
+}
+
+// temp fix for https://github.com/ant-design/ant-design/commit/a1fafb5b727b62cb0be29ce6e9eca8f579d4f8b7
+:global {
+    .row {
+        width: 100%;
+        display: block;
+        .col {
+            display: inline-block;
+        }
+    }
+    .f-l {
+        float: left;
+    }
+    .f-r {
+        float: right;
+    }
+    .btn-back {
+        position: fixed;
+        top: 75px;
+        left: 25px;
+        box-shadow: 0 0 7px rgba(0, 0, 0, .2);
+        border-radius: 50%;
+        z-index: 20;
+        .iconfont {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+    .ms-grid {
+        padding: 8px;
+        text-align: left;
+        line-height: 20px;
+        border-top: 1px solid #eee;
+        .user-image {
+            width: 71px;
+            padding: 5px 8px;
+            vertical-align: top;
+            img {
+                width: 44px;
+                height: 44px;
+                border-radius: 2px;
+            }
+        }
+        .ms-container {
+            width: calc(~"100% - 100px");
+            .ms-header {
+                font-weight: bold;
+                line-height: 24px;
+                .user-name {
+                    padding-right: 16px;
+                }
+            }
+            .ms-time {
+                opacity: .6;
+            }
+            .ms-content {
+                margin-top: 14px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .ant-spin-container {
+        overflow: visible !important;
+    }
+    .bg-vein {
+        background: url(/src/assets/bg-item/vein.png) repeat;
+    }
+    .ant-layout-header {
+        position: fixed;
+        width: 100%;
+        z-index: 666;
+        box-shadow: 0 0px 4px rgba(0, 0, 0, 0.21)
+    }
+    .ant-layout-header+.ant-layout-content {
+        padding-top: 64px;
+        margin: 0 !important;
+        background: #fbfbfb;
+    }
+    .ant-layout {
+        background: #fbfbfb;
+    }
+    .search-wrap {
+        padding: 24px 10px;
+        text-align: center;
+        background: white;
+        input {
+            color: #122112;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 28px;
+            border-width: 0;
+            background: none;
+        }
+        ::placeholder {
+            color: #ccc;
+        }
+    }
+}
+
+:global {
+    .layer-bg-red {
+        background: url(/src/assets/bg-item/layer-bg-red.svg) center no-repeat;
+    }
+    .layer-bg-purplish {
+        background: url(/src/assets/bg-item/layer-bg-purplish.svg) center no-repeat;
+    }
+    .layer-bg-cyan {
+        background: url(/src/assets/bg-item/layer-bg-cyan.svg) center no-repeat;
+    }
+    .layer-bg-blue {
+        background: url(/src/assets/bg-item/layer-bg-blue.svg) center no-repeat;
+    }
+    .layer-bg-purple {
+        background: url(/src/assets/bg-item/layer-bg-purple.svg) center no-repeat;
+    }
+    .layer-bg-green {
+        background: url(/src/assets/bg-item/layer-bg-green.svg) center no-repeat;
+    }
+    .layer-bg-gray {
+        background: url(/src/assets/bg-item/layer-bg-gray.svg) center no-repeat;
+    }
+    .layer-bg-pink {
+        background: url(/src/assets/bg-item/layer-bg-pink.svg) center no-repeat;
+    }
+    .card-layer {
+        margin: 21px 0;
+        cursor: pointer;
+        .card-item {
+            width: 240px;
+            box-shadow: 0 0 6px red;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.18);
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            margin: 0 auto;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            height: 244px;
+            color: white;
+            box-shadow: 0 10px 160px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background-size: 280px;
+            transition: .3s all ease-out .3s;
+            &:hover {
+                transform: scale(1.18) translateY(-8px);
+                box-shadow: 0 10px 80px rgba(4, 4, 4, 0.3);
+                transition: .4s all ease-in-out;
+                .icon-wrap {
+                    transform: rotate(45deg) scale(.9);
+                    transition: .3s all ease-in-out;
+                    .icon {
+                        color: @primary-color;
+                        transform: rotate(-45deg) scale(1.12);
+                        transition: .3s all ease-in-out .3s;
+                    }
+                }
+            }
+            .icon-wrap {
+                width: 71px;
+                height: 78px;
+                text-align: center;
+                border-radius: 17px 20px 28px 20px;
+                transform: rotate(45deg);
+                background: rgba(255, 255, 255, 0.2);
+                box-shadow: 0 0px 4px rgba(49, 44, 44, 0.21);
+                transition: .3s all ease-in-out .3s;
+                .icon {
+                    transform: rotate(-45deg);
+                    font-size: 54px;
+                    line-height: 80px;
+                    transition: .3s all ease-in-out;
+                }
+            }
+            .title {
+                font-size: 22px;
+                line-height: 44px;
+                letter-spacing: 4px;
+            }
+            .detail {
+                line-height: 16px;
+                margin: 0px 14px;
+                height: 50px;
+                overflow: hidden;
+                color: whitesmoke;
+            }
+        }
+    }
+    .card-footer>div {
+        width: 80px;
+        display: inline-flex;
+        margin: 6px;
+        justify-content: center;
+        align-items: center;
+        .name {
+            padding-right: 2px;
+            .icon {
+                opacity: .8;
+                cursor: pointer;
+                font-size: 22px;
+                &:hover {
+                  opacity: 1;
+                  transform: scale(1.02);
+                  transition: .3s ease-in-out;
+                }
+            }
+        }
+    }
+    .right-toobar-panel {
+        position: fixed;
+        top:64px;
+        bottom: 0;
+        right: 0;
+        width: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: .8;
+        flex-flow: column;
+        transition: .3s all ease-in;
+        .iconfont {
+            font-size: 28px;
+            cursor: pointer;
+            padding-bottom: 6px;
+        }
+        .my-services {
+            margin-bottom: 20px;
+        }
+        .my-shop-label {
+            line-height: 30px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            writing-mode: vertical-lr;
+        }
+        &:hover {
+            opacity: 1;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.14);
+            transition: .3s all ease-in;
+        }
+    }
+}
+
+:global {
+    @sw-lt: light;
+    @sw-dk: dark;
+    @color: @primary-color;
+    @crgold: #fbde40;
+    @crblue: #0689b7;
+    @crred: #eb5f00;
+    @crcyan: cyan;
+    @crgreen: #00d573;
+    @crtomato: tomato;
+    @crsky: skyblue;
+    @crthistle: thistle;
+    .mixin(dark;
+    @color) {
+        background: darken(@color, 14%);
+        border-color: darken(@color, 14%);
+    }
+    .mixin(light;
+    @color) {
+        background: lighten(@color, 10%);
+        border-color: lighten(@color, 10%);
+    }
+    .bgset(@color) {
+        background: @color  !important;
+        border-color: @color  !important;
+    }
+    .color-gold {
+        .ant-btn-primary,
+        .ant-tag-checkable-checked,
+        .ant-tabs-ink-bar,
+        .ant-tabs-ink-bar:before,
+        .bg-card-block,
+        .slick-active button {
+            color: @primary-color;
+            .bgset(@crgold);
+            &:hover,
+            &:focus,
+            &:active {
+                color: white;
+                .mixin(@sw-dk;
+                @crgold);
+            }
+        }
+        .ant-tag-checkable:active {
+            .mixin(@sw-dk;
+            @crgold);
+        }
+    }
+    .color-thistle {
+        .ant-btn-primary,
+        .ant-tag-checkable-checked,
+        .ant-tabs-ink-bar,
+        .ant-tabs-ink-bar:before,
+        .bg-card-block,
+        .slick-active button {
+            color: @primary-color;
+            .bgset(@crthistle);
+            &:hover,
+            &:focus,
+            &:active {
+                color: white;
+                .mixin(@sw-dk;
+                @crthistle);
+            }
+        }
+        .ant-tag-checkable:active {
+            .mixin(@sw-dk;
+            @crthistle);
+        }
+    }
+    .color-tomato {
+        .ant-btn-primary,
+        .ant-tag-checkable-checked,
+        .ant-tabs-ink-bar,
+        .ant-tabs-ink-bar:before,
+        .bg-card-block,
+        .slick-active button {
+            color: @primary-color;
+            .bgset(@crtomato);
+            &:hover,
+            &:focus,
+            &:active {
+                color: white;
+                .mixin(@sw-dk;
+                @crtomato);
+            }
+        }
+        .ant-tag-checkable:active {
+            .mixin(@sw-dk;
+            @crtomato);
+        }
+    }
+    .color-sky {
+        .ant-btn-primary,
+        .ant-tag-checkable-checked,
+        .ant-tabs-ink-bar,
+        .ant-tabs-ink-bar:before,
+        .bg-card-block,
+        .slick-active button {
+            color: @primary-color;
+            .bgset(@crsky);
+            &:hover,
+            &:focus,
+            &:active {
+                color: white;
+                .mixin(@sw-dk;
+                @crsky);
+            }
+        }
+        .ant-tag-checkable:active {
+            .mixin(@sw-dk;
+            @crsky);
+        }
+    }
+    .color-cyan {
+        .ant-btn-primary,
+        .ant-tag-checkable-checked,
+        .ant-tabs-ink-bar,
+        .ant-tabs-ink-bar:before,
+        .bg-card-block,
+        .slick-active button {
+            color: @primary-color;
+            .bgset(@crcyan);
+            &:hover,
+            &:focus,
+            &:active {
+                color: white;
+                .mixin(@sw-dk;
+                @crcyan);
+            }
+        }
+        .ant-tag-checkable:active {
+            .mixin(@sw-dk;
+            @crcyan);
+        }
+    }
+    .color-blue {
+        .ant-btn-primary,
+        .ant-tag-checkable-checked,
+        .ant-tabs-ink-bar,
+        .ant-tabs-ink-bar:before,
+        .bg-card-block,
+        .slick-active button {
+            .bgset(@crblue);
+            &:hover,
+            &:focus,
+            &:active {
+                .mixin(@sw-dk;
+                @crblue);
+            }
+        }
+        .ant-tag-checkable:active {
+            .mixin(@sw-dk;
+            @crblue);
+        }
+    }
+    .color-green {
+        .ant-btn-primary,
+        .ant-tag-checkable-checked,
+        .ant-tabs-ink-bar,
+        .ant-tabs-ink-bar:before,
+        .bg-card-block,
+        .slick-active button {
+            .bgset(@crgreen);
+            &:hover,
+            &:focus,
+            &:active {
+                .mixin(@sw-dk;
+                @crgreen);
+            }
+        }
+        .ant-tag-checkable:active {
+            .mixin(@sw-dk;
+            @crgreen);
+        }
+    }
+    .color-red {
+        .ant-btn-primary,
+        .ant-tag-checkable-checked,
+        .ant-tabs-ink-bar,
+        .ant-tabs-ink-bar:before,
+        .bg-card-block,
+        .slick-active button {
+            .bgset(@crred);
+            &:hover,
+            &:focus,
+            &:active {
+                .mixin(@sw-dk;
+                @crred);
+            }
+        }
+        .ant-tag-checkable:active {
+            .mixin(@sw-dk;
+            @crred);
+        }
+    }
+}

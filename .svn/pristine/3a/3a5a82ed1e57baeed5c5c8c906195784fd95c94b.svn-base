@@ -1,0 +1,31 @@
+//后台请求服务端地址 上海地址http://192.168.0.150:50000
+window.SEVERURL = ''; //80, 9061
+window.gettoken='AQAAANCMnd8BFdERjHoAwE_Cl-sBAAAAB5GCKTj7QEermnkTUmA3pAAAAAACAAAAAAADZgAAwAAAABAAAABDaJiCmZfo31tThhaCNyPBAAAAAASAAACgAAAAEAAAALEWDQAelwLrCmmQMjtvQCh4AAAAAvoYyc-r3v7qVxzLCkfD7obrQQQ-P9d_Vboja-jTXsrWf5x64IesvSuRRKRpbhfnuhx9Vr6mpnk7Fqf7pU026KfnsIZGffdzujkHNAKLm0sKrNb6SB6pxiakTqrHhzAbCh3hWDsZCWKOLV6llVNCNt7iDTNcrcDXFAAAAMilldwvHbK3Vp_q1oI9_-4Qj1FF';
+window.AuthorizationOptions = {
+      method: 'get',
+      headers: {
+        'Authorization':'Bearer '+ window.gettoken,
+        'Content-Type': 'application/json'
+      },
+      credentials: 'include'
+    };
+function S4() {
+    return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+}
+
+function NewGuid() {
+    return (S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4());
+}
+//去除字符串中间空格 
+String.prototype.Trim = function () {
+    //return this.replace(/(^s*)|(s*$)/g, "");
+    return this.replace(/^\s+/, '').replace(/\s+$/, '');
+}
+//去除字符串左侧空格 
+String.prototype.LTrim = function () {
+    return this.replace(/(^s*)/g, "");
+}
+//去除字符串右侧空格 
+String.prototype.RTrim = function () {
+    return this.replace(/(s*$)/g, "");
+}

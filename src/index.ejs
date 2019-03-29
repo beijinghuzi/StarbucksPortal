@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UBI STORE</title>
+  <link rel="stylesheet" href="assets/iconfont/iconfont.css">
+  <link rel="icon" href="images/fav.png" type="image/x-icon">
+  <style>
+    @keyframes shopcar {
+      10% {
+        opacity: 1;
+        transform: scale(.4) rotate(-30deg);
+      }
+      62% {
+        opacity: 1;
+        transform: scale(1) rotate(360deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1.4) translate(10px, -10px)
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+   <script src="../js/MetaXML.js?v=1016v05"></script>
+  <script src="../js/jquery-1.10.2.min.js?v=1016v03"></script>
+<script type="text/javascript">
+  $(document).ready(function(){ 
+     $.ajax({ 
+            type: "post", 
+     
+            url: "http://greatyucom.oicp.net:9001/token", 
+     
+            cache:false, 
+     
+            async:false, 
+     
+            dataType:"html",
+            data:"grant_type=client_credentials&client_id=admin&client_secret=ubi",
+     
+            success: function(xmlobj){ 
+              console.log(xmlobj)
+           } 
+
+    });
+   });
+ 
+
+</script>
+
+</body>
+
+</html>
